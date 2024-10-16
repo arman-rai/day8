@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const db = "mongodb+srv://arman:namra@cluster0-mern2.trvmj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0-mern2";
+const db = "mongodb+srv://arman:<passwd>@cluster0-mern2.trvmj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0-mern2";
 
 async function connectTodb() {
     await mongoose.connect(db);
