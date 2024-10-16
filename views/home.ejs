@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkatePro | Your Premium Skateboard Shop</title>
+    <style>
+        /* ... Existing CSS styles ... */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        /* ... other existing styles ... */
+    </style>
+    <script>
+        // JavaScript to handle the "Buy Now" button clicks and cart functionality
+        let cart = [];
+
+        function addToCart(productName, price) {
+            cart.push({product: productName, price: price});
+            localStorage.setItem('cartItems', JSON.stringify(cart));  // Store cart in localStorage
+            window.location.href = 'checkout.html';  // Redirect to the checkout page
+        }
+    </script>
+</head>
+<body>
+
+    <!-- ... Existing HTML ... -->
+
+    <section class="section">
+        <h2>Our Skateboards</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://example.com/skateboard1.jpg" alt="Skateboard 1">
+                <h3>Classic Cruiser</h3>
+                <p>$120.00</p>
+                <button onclick="addToCart('Classic Cruiser', 120)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://example.com/skateboard2.jpg" alt="Skateboard 2">
+                <h3>Street King</h3>
+                <p>$150.00</p>
+                <button onclick="addToCart('Street King', 150)">Buy Now</button>
+            </div>
+            <div class="product">
+                <img src="https://example.com/skateboard3.jpg" alt="Skateboard 3">
+                <h3>Pro Freestyler</h3>
+                <p>$180.00</p>
+                <button onclick="addToCart('Pro Freestyler', 180)">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SkatePro. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
